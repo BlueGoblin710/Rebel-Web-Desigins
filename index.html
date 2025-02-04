@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="overlay">
+        <h1>Rebel Web Designs</h1>
+        <h2>WEBSITES THAT WILL LAST FOREVER</h2>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <img src="assets/developer.png" alt="developer" />
+      <h3>Our Mission</h3>
+      <p>
+        At Rebel Web Designs, our mission is to empower small businesses with
+        high-quality, affordable web design services. We firmly believe that a
+        professional, user-friendly website is indispensable for any business
+        aiming to thrive in today’s dynamic digital landscape.
+      </p>
+      <h3>Message from the Rebels</h3>
+      <p>
+        We specialize in creating standout, affordable websites for small
+        businesses, offering personalized service with a team of expert
+        designers, developers and marketers. We stay current with trends to
+        ensure top-notch service.
+      </p>
+      <h3>Our Design Process</h3>
+      <p>
+        We collaborate closely with our clients to grasp their distinctive needs
+        and objectives. Subsequently, our team of seasoned designers crafts a
+        bespoke website tailored precisely to their business. Employing
+        cutting-edge technologies and adhering to industry best practices, we
+        guarantee that our websites are swift and secure.
+      </p>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()"></button>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        const hamburger = document.querySelector(".hamburger-menu");
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("open");
+      }
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      window.addEventListener("scroll", function () {
+        const backToTopButton = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {
+          backToTopButton.style.display = "flex";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
