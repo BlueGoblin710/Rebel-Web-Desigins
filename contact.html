@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="overlay">
+        <h1>Rebel Web Designs</h1>
+        <h2>Ready To Build Your Website</h2>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <form action="https://formspree.io/f/mbldybyy" method="POST">
+        <h2>Contact Us</h2>
+        <fieldset>
+          <legend>Customer Information</legend>
+          <label for="fname">First Name:</label>
+          <input type="text" name="fname" id="fname" required /><br /><br />
+
+          <label for="lname">Last Name:</label>
+          <input type="text" name="lname" id="lname" required /><br /><br />
+
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" required /><br /><br />
+        </fieldset>
+
+        <fieldset class="referral">
+          <legend>How did you hear about us?</legend>
+          <div class="radio-group">
+            <label>
+              Friend
+              <input type="radio" name="referral" value="friend" />
+            </label>
+            <label>
+              Website
+              <input type="radio" name="referral" value="website" />
+            </label>
+            <label>
+              Phone
+              <input type="radio" name="referral" value="phone" />
+            </label>
+            <label>
+              Other
+              <input type="radio" name="referral" value="other" />
+            </label>
+          </div>
+        </fieldset>
+
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments" rows="4" cols="40"></textarea
+        ><br />
+
+        <div class="button-group">
+          <button type="submit">Send</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()"></button>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        const hamburger = document.querySelector(".hamburger-menu");
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("open");
+      }
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      window.addEventListener("scroll", function () {
+        const backToTopButton = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {
+          backToTopButton.style.display = "flex";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
+
